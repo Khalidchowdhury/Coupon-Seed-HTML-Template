@@ -23,11 +23,19 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => modalOverlay.style.display = 'none', 200);
     }
 
-    // Show modal on button click
+    // Show modal on button click + open link in new tab
     getCouponButtons.forEach(button => {
         button.addEventListener('click', function (event) {
             event.preventDefault();
+
+            // Show the modal
             showModal();
+
+            // Open the link in a new tab
+            const linkUrl = button.getAttribute('href');
+            if (linkUrl) {
+                window.open(linkUrl, '_blank');
+            }
         });
     });
 
@@ -86,4 +94,5 @@ document.addEventListener('DOMContentLoaded', function () {
     if (copyCodeButton) {
         copyCodeButton.addEventListener('click', copyCouponCode);
     }
+
 });
