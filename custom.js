@@ -1,6 +1,3 @@
-
-
-
 // Modal JavaScript Code 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -48,30 +45,45 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Clipboard copy functionality
-    if (copyIcon && couponCodeText && copyCodeButton) {
-        copyIcon.addEventListener('click', function () {
-            const textToCopy = couponCodeText.textContent;
+    // Clipboard copy functionality (shared for both icon and button)
+    function copyCouponCode() {
+        if (!couponCodeText) return;
 
-            navigator.clipboard.writeText(textToCopy).then(function () {
-                // Success feedback
+        const textToCopy = couponCodeText.textContent;
+
+        navigator.clipboard.writeText(textToCopy).then(function () {
+            // Success feedback
+            if (copyIcon) {
                 copyIcon.classList.replace('bi-clipboard', 'bi-clipboard-check-fill');
                 copyIcon.style.color = '#198754';
-                copyCodeButton.innerHTML = '<i class="bi bi-check-circle-fill"></i> Copied!';
+            }
 
-                setTimeout(function () {
+            if (copyCodeButton) {
+                copyCodeButton.innerHTML = '<i class="bi bi-check-circle-fill"></i> Copied!';
+            }
+
+            setTimeout(function () {
+                if (copyIcon) {
                     copyIcon.classList.replace('bi-clipboard-check-fill', 'bi-clipboard');
                     copyIcon.style.color = '#868e96';
-                    copyCodeButton.innerHTML = '<i class="bi bi-clipboard-check"></i> Copy Code';
-                }, 2000);
+                }
 
-            }).catch(function (err) {
-                console.error('Could not copy text: ', err);
-                alert('Failed to copy code.');
-            });
+                if (copyCodeButton) {
+                    copyCodeButton.innerHTML = '<i class="bi bi-clipboard-check"></i> Copy Code';
+                }
+            }, 2000);
+        }).catch(function (err) {
+            console.error('Could not copy text: ', err);
+            alert('Failed to copy code.');
         });
     }
 
+    // Attach copy handler to both elements
+    if (copyIcon) {
+        copyIcon.addEventListener('click', copyCouponCode);
+    }
+
+    if (copyCodeButton) {
+        copyCodeButton.addEventListener('click', copyCouponCode);
+    }
 });
-
-
