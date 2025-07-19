@@ -4,33 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CouponSeed</title>
+    <title>Coupon Seed</title>
+    <link rel="icon" href="/img/coupon-seed.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="bg-white py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand" href="#">
-                <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_gemini_color_2x_2023.width-1200.format-webp.webp"
-                    alt="CouponSeed Logo" height="30">
+
+    <!-- Header Section -->
+    <header class="sticky-top"
+        style="background-color: hsl(210deg 20% 98% / 60%); backdrop-filter: blur(10px); z-index: 1030;">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/coupon-seed.png" alt="CouponSeed Logo" height="50">
             </a>
             <a href="#" class="text-decoration-none text-dark">
-                <i class="bi bi-arrow-left"></i> All Coupons
+                <i class="bi bi-house-door"></i> All Coupons
             </a>
         </div>
     </header>
 
+
+
     <main>
+
+        <!-- Hero Section -->
         <section class="hero text-white text-center py-5">
             <div class="container">
                 <h1 class="display-4 fw-bold"><i class="bi bi-shop"></i> Target</h1>
                 <p class="lead">Exclusive Coupon Codes & Deals</p>
                 <p>Save money on your Target purchases with our curated collection of verified coupon codes and special
                     offers.</p>
-                <a href="#" class="btn btn-light btn-lg">1 Active Coupon</a>
+                <a href="#" class="btn btn-light btn-lg coupon_btn">1 Active Coupon</a>
             </div>
         </section>
 
@@ -40,155 +47,237 @@
                 <p class="text-center text-muted mb-5">Click on any coupon to reveal the code and start saving on your
                     Target orders.</p>
 
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h5 class="card-title mb-0">Home & Kitchen Essentials</h5>
-                                    <span class="text-muted"><i class="bi bi-calendar"></i> Jan 30, 2025</span>
-                                </div>
-                                <p class="card-text text-muted">Target</p>
-                                <h3 class="card-text text-success">20% OFF</h3>
-                                <a href="#" class="btn btn-success w-100"><i class="bi bi-scissors"></i> Get Coupon Code
-                                    <i class="bi bi-box-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-light py-5">
-            <div class="container text-center">
-                <h2 class="mb-4">Explore Other Stores</h2>
-                <p class="text-muted mb-5">Discover great deals from other popular brands</p>
-
-                <div class="d-flex justify-content-center flex-wrap gap-3">
-                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-tag"></i> Amazon</a>
-                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-tag"></i> Nike</a>
-                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-tag"></i> Best Buy</a>
-                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-tag"></i> Zara</a>
-                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-tag"></i> Whole Foods</a>
-                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-tag"></i> BookDepository</a>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Latest Money-Saving Tips</h2>
-                <p class="text-center text-muted mb-5">Stay updated with our latest guides and tips to maximize your
-                    savings</p>
-
                 <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                class="card-img-top" alt="Shopping Tips">
-                            <div class="card-body">
-                                <span class="badge bg-primary mb-2">Shopping Tips</span>
-                                <div class="d-flex justify-content-between text-muted small mb-2">
-                                    <span><i class="bi bi-calendar"></i> 1/15/2024</span>
-                                    <span><i class="bi bi-clock"></i> 5 min read</span>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="coupon-card">
+                            <span class="coupon-category">Home</span>
+                            <h3 class="coupon-title">Home & Kitchen Essentials</h3>
+                            <p class="coupon-brand">Target</p>
+                            <div class="coupon-details">
+                                <span class="coupon-discount">20% OFF</span>
+                                <span class="coupon-date">
+                                    <i class="bi bi-clock"></i> Jan 30, 2025
+                                </span>
+                            </div>
+                            <a href="#" class="coupon-button">
+                                <i class="bi bi-scissors"></i>
+                                Get Coupon Code
+                                <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore-stores">
+            <h2 class="section-title">Explore Other Stores</h2>
+            <p class="section-subtitle">Discover great deals from other popular brands</p>
+            <div class="stores-container">
+                <a href="#" class="store-button">
+                    <i class="bi bi-tag-fill"></i>
+                    <span> Amazon</span>
+                </a>
+                <a href="#" class="store-button">
+                    <i class="bi bi-tag-fill"></i>
+                    <span> Nike</span>
+                </a>
+                <a href="#" class="store-button">
+                    <i class="bi bi-tag-fill"></i>
+                    <span> Best Buy</span>
+                </a>
+                <a href="#" class="store-button">
+                    <i class="bi bi-tag-fill"></i>
+                    <span> Zara</span>
+                </a>
+                <a href="#" class="store-button">
+                    <i class="bi bi-tag-fill"></i>
+                    <span> Whole Foods</span>
+                </a>
+                <a href="#" class="store-button">
+                    <i class="bi bi-tag-fill"></i>
+                    <span> BookDepository</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="latest-tips-section">
+            <div class="container">
+                <h2 class="section-title">Latest Money-Saving Tips</h2>
+                <p class="section-subtitle">Stay updated with our latest guides and tips to maximize your savings</p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="blog-card">
+                            <a href="#">
+                                <img src="img/1.jpeg" class="blog-card-img" alt="A person paying at a shop counter">
+                            </a>
+                            <div class="blog-card-body">
+                                <div class="blog-card-meta">
+                                    <span class="category-badge">Shopping Tips</span>
+                                    <div class="meta-group">
+                                        <span class="meta-item"><i class="bi bi-calendar"></i> 1/15/2024</span>
+                                        <span class="meta-item"><i class="bi bi-clock"></i> 5 min read</span>
+                                    </div>
                                 </div>
-                                <h5 class="card-title">10 Best Shopping Tips to Maximize Your Savings</h5>
-                                <p class="card-text">Discover proven strategies to save more money on your online
-                                    purchases with these expert...</p>
-                                <p class="card-text"><small class="text-muted">By Sarah Johnson</small></p>
+                                <h3 class="blog-card-title"><a href="#">10 Best Shopping Tips to Maximize Your
+                                        Savings</a></h3>
+                                <p class="blog-card-excerpt">Discover proven strategies to save more money on your
+                                    online purchases with these expert...</p>
+                                <div class="blog-card-author">
+                                    <i class="bi bi-person-fill"></i> By Sarah Johnson
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="https://images.pexels.com/photos/4123897/pexels-photo-4123897.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                class="card-img-top" alt="Discount Hunting">
-                            <div class="card-body">
-                                <span class="badge bg-info mb-2">Discount Hunting</span>
-                                <div class="d-flex justify-content-between text-muted small mb-2">
-                                    <span><i class="bi bi-calendar"></i> 1/12/2024</span>
-                                    <span><i class="bi bi-clock"></i> 7 min read</span>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="blog-card">
+                            <a href="#">
+                                <img src="img/2.jpeg" class="blog-card-img" alt="Shopping bags on a dark background">
+                            </a>
+                            <div class="blog-card-body">
+                                <div class="blog-card-meta">
+                                    <span class="category-badge">Discount Hunting</span>
+                                    <div class="meta-group">
+                                        <span class="meta-item"><i class="bi bi-calendar"></i> 1/12/2024</span>
+                                        <span class="meta-item"><i class="bi bi-clock"></i> 7 min read</span>
+                                    </div>
                                 </div>
-                                <h5 class="card-title">How to Find Hidden Discount Codes</h5>
-                                <p class="card-text">Learn the insider secrets to discovering exclusive discount codes
-                                    that retailers don't advertise...</p>
-                                <p class="card-text"><small class="text-muted">By Mike Chen</small></p>
+                                <h3 class="blog-card-title"><a href="#">How to Find Hidden Discount Codes</a></h3>
+                                <p class="blog-card-excerpt">Learn the insider secrets to discovering exclusive discount
+                                    codes that retailers don't advertise...</p>
+                                <div class="blog-card-author">
+                                    <i class="bi bi-person-fill"></i> By Mike Chen
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="https://images.pexels.com/photos/5868249/pexels-photo-5868249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                class="card-img-top" alt="Shopping Events">
-                            <div class="card-body">
-                                <span class="badge bg-danger mb-2">Shopping Events</span>
-                                <div class="d-flex justify-content-between text-muted small mb-2">
-                                    <span><i class="bi bi-calendar"></i> 1/10/2024</span>
-                                    <span><i class="bi bi-clock"></i> 4 min read</span>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="blog-card">
+                            <a href="#">
+                                <img src="img/3.jpeg" class="blog-card-img" alt="Sale tags and a gift box">
+                            </a>
+                            <div class="blog-card-body">
+                                <div class="blog-card-meta">
+                                    <span class="category-badge">Shopping Events</span>
+                                    <div class="meta-group">
+                                        <span class="meta-item"><i class="bi bi-calendar"></i> 1/10/2024</span>
+                                        <span class="meta-item"><i class="bi bi-clock"></i> 4 min read</span>
+                                    </div>
                                 </div>
-                                <h5 class="card-title">Black Friday vs Cyber Monday: When to Shop</h5>
-                                <p class="card-text">A comprehensive guide to timing your purchases for maximum savings
-                                    during the biggest...</p>
-                                <p class="card-text"><small class="text-muted">By Emma Davis</small></p>
+                                <h3 class="blog-card-title"><a href="#">Black Friday vs Cyber Monday: When to Shop</a>
+                                </h3>
+                                <p class="blog-card-excerpt">A comprehensive guide to timing your purchases for maximum
+                                    savings during the biggest...</p>
+                                <div class="blog-card-author">
+                                    <i class="bi bi-person-fill"></i> By Emma Davis
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5>CouponSeed</h5>
-                    <p>Your trusted source for the latest discount codes and money-saving deals from top brands
-                        worldwide.</p>
-                    <ul class="list-unstyled">
-                        <li><i class="bi bi-envelope"></i> support@couponseed.com</li>
-                        <li><i class="bi bi-telephone"></i> +1 (555) 123-4567</li>
-                        <li><i class="bi bi-geo-alt"></i> San Francisco, CA</li>
-                    </ul>
+    <div class="modal-overlay" id="couponModalOverlay">
+        <div class="coupon-modal" id="couponModal">
+            <div class="modal-header">
+                <span class="category-badge">Home</span>
+                <button class="close-button" id="closeModalButton">×</button>
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title">Home & Kitchen Essentials</h3>
+                <p class="modal-brand"><i class="bi bi-shop"></i> Target</p>
+                <div class="modal-discount-banner">
+                    <h4>20% OFF</h4>
+                    <p>Discount Available</p>
                 </div>
-                <div class="col-md-2 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">All Coupons</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Top Stores</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Categories</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Submit Coupon</a></li>
-                    </ul>
+                <div class="coupon-code-box">
+                    <span id="couponCodeText">HOME20</span>
+                    <i class="bi bi-clipboard" id="copyIcon"></i>
                 </div>
-                <div class="col-md-2 mb-4">
-                    <h5>Categories</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Fashion</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Electronics</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Home & Garden</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Travel</a></li>
-                    </ul>
+                <div class="description-section">
+                    <label>Description:</label>
+                    <p>Transform your home with 20% off on home and kitchen essentials. Includes furniture, decor,
+                        appliances, and more.</p>
                 </div>
-                <div class="col-md-2 mb-4">
-                    <h5>Support</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Help Center</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Terms of Service</a></li>
-                    </ul>
+                <div class="expires-info">
+                    <i class="bi bi-clock"></i> Expires: Jan 30, 2025
                 </div>
             </div>
-            <hr>
-            <div class="d-flex justify-content-between align-items-center">
-                <p class="mb-0">© 2024 CouponSeed. All rights reserved. Save more, spend less.</p>
-                <button class="btn btn-dark btn-sm">Edit with <i class="bi bi-gem"></i> Lovable</button>
+            <div class="modal-footer">
+                <button class="copy-code-btn" id="copyCodeButton"><i class="bi bi-clipboard-check"></i> Copy
+                    Code</button>
+                <a href="#" class="visit-store-btn"><i class="bi bi-box-arrow-up-right"></i> Visit Store</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                    <div class="footer-widget">
+                        <h4 class="footer-heading">CouponSeed</h4>
+                        <p class="footer-description">Your trusted source for the latest discount codes and money-saving
+                            deals from top brands worldwide.</p>
+                        <ul class="contact-info">
+                            <li><i class="bi bi-envelope-fill"></i> support@couponseed.com</li>
+                            <li><i class="bi bi-telephone-fill"></i> +1 (555) 123-4567</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> San Francisco, CA</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">All Coupons</a></li>
+                            <li><a href="#">Top Stores</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">Submit Coupon</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-heading">Categories</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Home & Garden</a></li>
+                            <li><a href="#">Travel</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="footer-widget">
+                        <h4 class="footer-heading">Support</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr class="footer-divider">
+                <div class="d-flex align-items-center justify-content-between flex-wrap">
+                    <p class="copyright-text text-center mb-0">
+                        © 2024 CouponSeed. All rights reserved. Save more, spend less.
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Js Code & CDN  -->
+    <script src="custom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
